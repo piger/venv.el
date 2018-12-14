@@ -75,7 +75,7 @@ virtualenv.  PATH should be a list of strings specifiying directories."
   "Get the virtualenv path from poetry."
   (interactive)
   (venv--activate-dir (replace-regexp-in-string "\n$" ""
-                                                (shell-command-to-string "poetry debug:info | awk '/Path/ { print $3 }'"))))
+                                                (shell-command-to-string "poetry debug:info | awk '/Path/ { print $3 \"/\" }'"))))
 
 ;;;###autoload
 (defun venv-activate (&optional location)
