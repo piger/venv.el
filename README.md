@@ -11,3 +11,8 @@ just to get the virtualenv activated and deactivated and made a standalone emacs
 ```
 
 Then use the commands `virtualenv-activate` and `virtualenv-deactivate`.
+
+## Poetry support
+
+To activate the virtualenv currently used by [Poetry](https://github.com/sdispater/poetry) run
+`venv-from-poetry`.
