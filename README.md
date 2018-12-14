@@ -16,3 +16,10 @@ Then use the commands `virtualenv-activate` and `virtualenv-deactivate`.
 
 To activate the virtualenv currently used by [Poetry](https://github.com/sdispater/poetry) run
 `venv-from-poetry`.
+
+## See also
+
+If you're looking for more features see these packages:
+
+- [pyvenv](https://github.com/jorgenschaefer/pyvenv)
+- the original [virtualenvwrapper.el](https://github.com/porterjamesj/virtualenvwrapper.el)
