@@ -71,6 +71,13 @@ virtualenv.  PATH should be a list of strings specifiying directories."
   (run-hooks 'venv-postactivate-hook))
 
 ;;;###autoload
+(defun venv-from-poetry ()
+  "Get the virtualenv path from poetry."
+  (interactive)
+  (venv--activate-dir (replace-regexp-in-string "\n$" ""
+                                                (shell-command-to-string "poetry debug:info | awk '/Path/ { print $3 }'"))))
+
+;;;###autoload
 (defun venv-activate (&optional location)
   "Interactively switch to virtualenv LOCATION.
 Prompts for name if called interactively."
